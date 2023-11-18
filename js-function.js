@@ -141,21 +141,16 @@ function switchHuruf(huruf){
         case "Z":
             return "z";
             break;
-        default :
-            return huruf
+        default:
+            return huruf;
     }
 };
 
-function gantiHuruf(string){
-    if(!string || string.length < 1){
-        return "";
-    }
+function gantiHuruf(string) {
     let returnString = "";
-    for (let i = 0; i < string.length; ++i){
+    for (let i = 0; i < string.length; ++i) {
         let word = switchHuruf(string[i]);
-        if (word){
-            returnString = returnString + switchHuruf(string[i]);
-        }
+        returnString = returnString + word;
     }
     return returnString;
 }
